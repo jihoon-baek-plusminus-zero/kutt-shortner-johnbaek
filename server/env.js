@@ -1,11 +1,5 @@
 require("dotenv").config();
 
-console.log("DEBUG: NODE_ENV =", process.env.NODE_ENV);
-console.log("DEBUG: JWT_SECRET exists?", "JWT_SECRET" in process.env);
-console.log("DEBUG: JWT_SECRET type =", typeof process.env.JWT_SECRET);
-console.log("DEBUG: JWT_SECRET length =", process.env.JWT_SECRET ? process.env.JWT_SECRET.length : 0);
-console.log("DEBUG: All Env Keys =", Object.keys(process.env).join(", "));
-
 const { cleanEnv, num, str, bool } = require("envalid");
 const { readFileSync } = require("node:fs");
 
