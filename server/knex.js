@@ -24,16 +24,6 @@ const db = knex({
   useNullAsDefault: true,
 });
 
-console.log("DEBUG: DB Config:", {
-  client: env.DB_CLIENT,
-  host: env.DB_HOST,
-  port: env.DB_PORT,
-  database: env.DB_NAME,
-  user: env.DB_USER,
-  ssl: env.DB_SSL,
-  // password: "***" // Do not log password
-});
-
 db.isPostgres = isPostgres;
 db.isSQLite = isSQLite;
 db.isMySQL = isMySQL;

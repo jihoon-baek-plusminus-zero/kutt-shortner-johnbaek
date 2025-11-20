@@ -80,12 +80,4 @@ for (const key in spec) {
 
 const env = cleanEnv(process.env, spec);
 
-console.log("DEBUG: Env DB Config:", {
-  host: env.DB_HOST,
-  port: env.DB_PORT,
-  database: env.DB_NAME,
-  user: env.DB_USER,
-  ssl: env.DB_SSL,
-});
-
 module.exports = env;
